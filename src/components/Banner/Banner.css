@@ -1,0 +1,46 @@
+/* Banner */
+.banner-section {
+  width: 100%;
+  background: #ffffff;
+  padding: 2rem 1rem;
+}
+
+.banner-inner {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .banner-inner {
+    flex-direction: row;
+  }
+}
+
+.banner-card {
+  flex: 1;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: none;
+}
+
+.banner-card .card-body {
+  background: transparent !important;
+  background-color: transparent !important;
+  --tw-bg-opacity: 0 !important;
+}
+
+.banner-card-progress {
+  background: linear-gradient(135deg, #6B35D9 0%, #8B5CF6 100%);
+  background-size: auto 100%, auto 60%, auto 100%, cover;
+  background-position: left center, center center, right center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+}
+
+.banner-card-resolved {
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+  background-size: auto 100%, auto 60%, auto 100%, cover;
+  background-position: left center, center center, right center, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+}

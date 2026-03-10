@@ -1,0 +1,66 @@
+.navbar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #f8f8f8;
+}
+
+@media (min-width: 768px) {
+  .navbar-container {
+    flex-wrap: nowrap;
+  }
+}
+
+.navbar-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .navbar-title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.navbar-title-wrap {
+  width: 100%;
+  flex-shrink: 0;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-title-wrap {
+    width: 60%;
+    margin-bottom: 0;
+  }
+}
+
+.navbar-links-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .navbar-links-wrap {
+    width: 40%;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: flex-end;
+  }
+}
+
+.navbar-ticket-btn {
+  background-color: #422AD5;
+  color: #fff;
+}

@@ -1,0 +1,19 @@
+.container-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.container-tickets {
+  flex: 7;
+}
+
+.container-tasks {
+  flex: 3;
+}
+
+@media (max-width: 768px) {
+  .container-layout {
+    flex-direction: column;
+  }
+}
