@@ -1,0 +1,42 @@
+.ticket-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+.ticket-desc {
+  font-size: 0.8rem;
+  color: #6B7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ticket-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.ticket-priority {
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+
+.priority-high   { color: #EF4444; }
+.priority-medium { color: #F59E0B; }
+.priority-low    { color: #10B981; }
+
+.ticket-customer,
+.ticket-date {
+  color: #6B7280;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.ticket-footer-icon {
+  font-size: 0.7rem;
+}
