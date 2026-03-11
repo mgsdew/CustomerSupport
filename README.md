@@ -1,16 +1,24 @@
-# React + Vite
+## Follow-up Questions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# What is JSX, and why is it used?
+Answer: JSX stands for JavaScript XML, where in React we use JSX files for keeping HTML elements to describe what the UI should look like while keeping the logic and markup in one place. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
+# What is the difference between State and Props?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Answer: In React we used State as an internal data exchange within a component that value can be changed over time, whereas Props (short from of properties) are read-only data used for passing data from a parent to a child component.
 
-## Expanding the ESLint configuration
+# What is the useState hook, and how does it work?
+Answer: useState hook is a function that allow us to add React state to functional components by returning the current state value and a function to update it. For example below is a example of hook where declared a state for counting number which allows to track a number and update it via 'setCount(count + 1)'
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+'const [count, setCount] = useState(0)'
+
+
+# How can you share state between components in React?
+Answer: We can share State by lifting it up to the closest common parent, which then passes it down via props. For an example in this site, inProgressTickets declared in App component and is passed to both Banner and Tasks components.
+
+
+
+# How is event handling done in React?
+Answer: In React we handles events using props like onClick, where handler functions are defined in the parent and passed down as props so child components which can trigger state changes. For example, clicking a child component like 'ticket card' using onAddTicket from App component. 
