@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Banner from './components/Banner/Banner';
 import Footer from './components/Footer/Footer';
 import Container from './components/Container/Container';
+import { ToastContainer, toast } from 'react-toastify';
 
 const fetchTickets = async () =>{
   const res = await fetch("/support-tickets.json")
@@ -18,17 +19,17 @@ function App() {
 
   const handleAddTicket = (ticket) => {
     if (inProgressTickets.find(t => t.id === ticket.id)) {
-      alert(`"${ticket.title}" is already in progress!`);
+      toast.error(`"${ticket.title}" is already in progress!`);
       return;
     }
     setInProgressTickets(prev => [...prev, ticket]);
-    alert(`"${ticket.title}" added to In-Progress!`);
+    toast.success(`"${ticket.title}" added to In-Progress!`);
   };
 
   const handleComplete = (ticket) => {
     setInProgressTickets(prev => prev.filter(t => t.id !== ticket.id));
     setResolvedTickets(prev => [...prev, ticket]);
-    alert(`"${ticket.title}" marked as Resolved!`);
+    toast.info(`"${ticket.title}" marked as Resolved!`);
   };
 
   return (
@@ -49,6 +50,7 @@ function App() {
           resolvedTickets={resolvedTickets}
           onComplete={handleComplete}
         />
+        <ToastContainer position="top-center" />
       </div>
 
        {/* Footer Section */}
