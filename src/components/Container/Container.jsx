@@ -7,6 +7,7 @@ import './Container.css';
 const Container = ({ ticketsPromise, onAddTicket, inProgressTickets, resolvedTickets, onComplete }) => {
     
   const ticketsData = use(ticketsPromise);
+  const visibleTickets = ticketsData.filter(t => !resolvedTickets.find(r => r.id === t.id));
 
   return (
     <div className="container-layout">
@@ -14,7 +15,7 @@ const Container = ({ ticketsPromise, onAddTicket, inProgressTickets, resolvedTic
         <h2 className="tickets-heading">Customer Tickets</h2>
         <Suspense fallback={<p>Loading tickets...</p>}>
             <div className="tickets-grid">
-            {ticketsData.map(ticket => (
+            {visibleTickets.map(ticket => (
                 <TicketCard key={ticket.id} ticket={ticket} onAddTicket={onAddTicket} />
             ))}
             </div>
