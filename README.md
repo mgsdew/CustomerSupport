@@ -1,3 +1,40 @@
+# CS — Ticket System
+
+A simple and responsive ticket management dashboard built with React.
+
+**Live Deployment:** [https://customerticketsupport.netlify.app/](https://customerticketsupport.netlify.app/)
+
+---
+
+## Business Logic & Features
+
+This application provides a streamlined interface for managing customer support tickets with the following workflow:
+
+1.  **View Tickets:** All available customer tickets are displayed in a grid.
+2.  **Start Task:** Clicking a ticket card moves it to the "In-Progress" state.
+    - A toast notification confirms the action.
+    - The ticket is added to the "Task Status" panel.
+    - The "In-Progress" count in the banner is incremented.
+3.  **Complete Task:** Clicking the "Complete" button on a task marks it as resolved.
+    - A toast notification confirms the action.
+    - The ticket is removed from the main ticket grid and the "In-Progress" list.
+    - The "Resolved" count in the banner is incremented.
+    - The ticket appears in the "Resolved Tasks" list with a visual strikethrough.
+
+---
+
+## Tech Stack & Tools
+
+- **React:** Core UI library, utilizing Hooks (`useState`, `use`) for state management and side effects.
+- **Vite:** Frontend tooling for a fast development server and optimized production builds.
+- **Tailwind CSS:** A utility-first CSS framework for rapid and custom styling.
+- **daisyUI:** A component library for Tailwind CSS to quickly build out UI elements.
+- **React Toastify:** For providing user-friendly, non-blocking notifications.
+- **Font Awesome:** Used for icons throughout the application.
+- **ESLint:** For code linting to ensure code quality and consistency.
+
+---
+
 ## Follow-up Questions
 
 
